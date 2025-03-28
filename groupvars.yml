@@ -1,0 +1,9 @@
+--- 
+- hosts: webservers
+  become: yes 
+  tasks: 
+  - name: using group variables 
+    apt: 
+     name: "{{a}}"
+     state: "{{b}}"
+     update_cache: "{{c}}"
