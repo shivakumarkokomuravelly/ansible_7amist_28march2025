@@ -1,0 +1,15 @@
+--- 
+- hosts: all 
+  become: yes
+  tasks:  
+  - name: installing on all nodes 
+    dnf: 
+     name: httpd 
+     state: present
+     update_cache: yes 
+    when ansible_os_family == "RedHat" 
+  - name: start webserver 
+    service: 
+     name: httpd 
+     status: started 
+    when ansible_os_family == "RedHat" 
