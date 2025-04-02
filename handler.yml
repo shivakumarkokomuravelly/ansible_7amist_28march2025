@@ -7,7 +7,7 @@
       state: present
    - name: Edit index.html
      copy:
-      content: "Welcome to ansible"
+      content: "Welcome to devops"
       dest: /var/www/html/index.html
      notify: restart_apache2
   handlers:

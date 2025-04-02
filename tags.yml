@@ -5,7 +5,7 @@
    - name: installing tree
      apt:
       name: tree
-      state: present
+      state: absent
      tags:
       tree_installation
    - name: installing apache

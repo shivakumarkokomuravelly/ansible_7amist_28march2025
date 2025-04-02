@@ -2,11 +2,11 @@
 - hosts: localhost 
   become: yes 
   tasks: 
-  -name: installing apache2 server to demostrate templates 
-   apt: 
-   name: apache2 
-    state: present 
-    update_cache: yes 
+  - name: installing apache2 server to demostrate templates 
+    apt: 
+     name: apache2 
+     state: present 
+     update_cache: yes 
   - name: using templates to create a new file 
     template:
      src: mytemplate.j2  

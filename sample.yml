@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: want to execute a linux command
+    command: 
+     cmd: hostname -f
+    register: results
+  - name: want to display results    
+    debug:
+     msg: "{{results}}" 
+
